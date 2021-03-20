@@ -1,8 +1,9 @@
 #include "stdafx.h"
-LCDWIKI_KBV lcd(ILI9486,A3,A2,A1,A0,A4); //model,cs,cd,wr,rd,reset
 
-class tft
+
+class TFT
 {
-	
-}
-
+	public:
+      static LCDWIKI_KBV LCD; //model,cs,cd,wr,rd,reset;
+      void ShowString(uint8_t *str,int16_t x,int16_t y,uint8_t csize,uint16_t fc, uint16_t bc,boolean mode);
+};
