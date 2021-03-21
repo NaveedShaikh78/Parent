@@ -11,12 +11,6 @@ Auther : Naveed Shaikh
 #define YM 9   // can be a digital pin
 #define XP 8   // can be a digital pin
 
-//param calibration from kbv
-#define TS_MINX 906
-#define TS_MAXX 116
-
-#define TS_MINY 92 
-#define TS_MAXY 952
 
 // For better pressure precision, we need to know the resistance
 // between X+ and X- Use any multimeter to read it
@@ -32,21 +26,6 @@ uint16_t color_mask[] = {0xF800,0xFFE0,0x07E0,0x07FF,0x001F,0xF81F}; //color sel
 int16_t old_color, current_color,flag_colour;
 int16_t old_pen,current_pen,flag_pen;
 boolean show_flag = true;
-
-//show color select menu
-void show_color_select_menu(void)
-{
-   uint16_t i;
-   for(i = 0;i<6;i++)
-   {
-       TFT::LCD.Set_Draw_color(color_mask[i]);
-       TFT::LCD.Fill_Rectangle(i*COLORBOXSIZE, 0, (i+1)*COLORBOXSIZE-1, COLORBOXSIZE/2-1);
-   }  
-   TFT::LCD.Set_Draw_color(GREEN);
-   TFT::LCD.Fill_Round_Rectangle((TFT::LCD.Get_Display_Width()-20)/3+10, COLORBOXSIZE/2+2, (TFT::LCD.Get_Display_Width()-20)/3*2+10,COLORBOXSIZE/2+20, 5);
-   TFT_LCD.ShowString("OK",CENTER,COLORBOXSIZE/2+4,2,RED, BLACK,1);
-}
-
 
 
 //show main menu
