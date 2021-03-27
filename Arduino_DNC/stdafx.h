@@ -17,5 +17,3 @@
 #define MAGENTA 0xF81F
 #define YELLOW  0xFFE0
 #define WHITE   0xFFFF
-
-#define MINPRESSURE 0.01

@@ -3,9 +3,15 @@
 class Button
 {
  public:
-      uint8_t csize;
+      uint8_t TextSize;
       uint16_t TextColor; 
       uint16_t BGColor;
-      boolean mode;
-      Button(const char *str,int8_t x,int8_t y, int8_t width, int8_t height);
+      uint16_t x;
+      uint16_t y;
+      uint16_t width;
+      uint16_t height;
+      
+      Button();
+      Button(const char *str,uint16_t x,uint16_t y, uint16_t width, uint16_t height,bool draw =false);
+      void Draw();
 };
