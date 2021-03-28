@@ -17,3 +17,4 @@
 #define MAGENTA 0xF81F
 #define YELLOW  0xFFE0
 #define WHITE   0xFFFF
+#define DCYAN   0x0B0A
